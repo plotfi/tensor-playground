@@ -137,9 +137,9 @@ add_kernel_test(product-dim dim-reduce.cu OP_PROD)
 # Arg reductions.
 add_kernel_test(argmax argreduce.cu)
 add_kernel_test(argmin argreduce.cu ARG_MIN)
-# Scalar 1D losses.
+# Scalar 1D losses. (hinge-loss has its own standalone test-hinge-loss.cu, which
+# the test-*.cu glob below picks up automatically.)
 add_kernel_test(huber-loss loss-reduce.cu L_HUBER)
-add_kernel_test(hinge-loss loss-reduce.cu L_HINGE)
 add_kernel_test(kl-loss    loss-reduce.cu L_KL)
 # Triangular matmul.
 add_kernel_test(upper-trig-matmul trig-matmul.cu TRIG_UPPER)
